@@ -17,10 +17,11 @@ def carregar_dados():
     )
 
     # Conecta no BigQuery com as credenciais do seu projeto
-    client = bigquery.Client(
-        project="estudoinicial-507322", credentials=credentials
+   client = bigquery.Client(
+        project="estudoinicial-507322",
+        credentials=credentials,
+        location="US",
     )
-
     # Consulta otimizada (traz os dados pré-agregados para economizar memória e acelerar a busca)
     query = """
     SELECT 
